@@ -17,20 +17,37 @@ If you want to check other versions than 1.18.5 you need to download and build K
 Check the paths to your header files in the `redhat.properties` file. Currently, the configuration files point to a `systems` directory for header files. That directory is not part of this repository. If you want to use the exact same headers that we are using, download them here http://www.cs.cmu.edu/~ckaestne/tmp/includes-redhat.tar.bz2
 
 
-Installation
-------------
+Installation \& Execution
+-------------------------
 
-1. Clone all git repositories in one shared folder
+⚠ **Disclaimer** Original installation instructions are either out-to-date or incomplete. If you precisly follow the installation steps in this section, exection of TypeChef with Busybox should work. I am not sure whether all steps are necessary nor are complete.
+
+*Installation*
+
+1. Clone all git repositories in one shared folder:
    - [TypeChef](https://github.com/ckaestne/TypeChef)
    - [TypeChef-BusyboxAnalysis](https://github.com/ckaestne/TypeChef-BusyboxAnalysis)
    - [KBuildMiner](https://github.com/ckaestne/KBuildMiner)
    - [kconfigreader](https://github.com/ckaestne/kconfigreader)
-2. Alle Git-Repos in einen gemeinsamen Ordner
-3. (http://www.cs.cmu.edu/~ckaestne/tmp/includes-redhat.tar.bz2) herunterladen und speichern in `TypeCehf-BusyboxAnalysis/systems/redhat/`
-4. Busybox 1.18.5 in `TypeChef-BusyboxAnalysis/` entpacken
-5. (https://github.com/doyougnu/TypeChef-BusyboxAnalysis/blob/paulsetup/VsatRunQueryLogging.sh) speichern in `TypeChef-BusyboxAnalysis/` und ausführen (ggfs. anpassen)
-6. Adjust config! 
+2. Download [header files](http://www.cs.cmu.edu/~ckaestne/tmp/includes-redhat.tar.bz2) and extract the contents to `TypeChef-BusyboxAnalysis/systems/redhat/`. The folder structure should look like `TypeChef-BusyboxAnalysis/systems/redhat/usr/...`.
+3. Download [Busybox 1.18.5] and extract to `TypeChef-BusyboxAnalysis/`. The folder structure should look like `TypeChef-BusyboxAnalysis/busybox-1.18.5/...`.
+4. Modify in `TypeChef-BusyboxAnalysis/jccp.conf` in line `12`: `system=redhat`
 
+*Compilation*
+
+```
+set -x
+cd TypeChef/
+sbt mkrun
+```
+
+*Execution*
+
+```
+cd TypeChef-BusyboxAnalysis/
+./cleanBusybox.sh
+./analyzeBusybox.sh | tee output.log
+```
 
 Running on 1.18.5
 -----------------
