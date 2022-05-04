@@ -20,7 +20,7 @@ Check the paths to your header files in the `redhat.properties` file. Currently,
 Installation \& Execution
 -------------------------
 
-⚠ **Disclaimer** Original installation instructions are either out-to-date or incomplete. If you precisly follow the installation steps in this section, exection of TypeChef with Busybox should work. I am not sure whether all steps are necessary nor are complete.
+⚠ **Disclaimer** Original installation instructions are either out-to-date or incomplete. If you precisly follow the installation steps in this section, exection of TypeChef with Busybox should work. I am not sure whether all steps are necessary nor complete.
 
 *Installation*
 
