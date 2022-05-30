@@ -1,8 +1,8 @@
 name := "TypeChef Busybox Analysis"
 
-version := "0.4.2"
+version := "0.3.8"
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.11.4"
 
 organization := "de.fosd.typechef"
 
