@@ -3,6 +3,7 @@
 #* the feature model
 #* the header file
 
+codebasePath="$(pwd)/custom_busybox/"
 
 sbt mkrun
 
@@ -34,7 +35,7 @@ cd ..
 cd KBuildMiner
 
 java -Xmx2G -Xms128m -Xss50m -cp kbuildminer.jar gsd.buildanalysis.linux.KBuildMinerMain \
-  --codebase /home/kevin/Universität/Derzeit/Masterabeit/Implementierung_Evaluation/Typechef2/TypeChef-BusyboxAnalysis/custom_busybox/ \
+  --codebase $codebasePath \
   --topFolders applets,archival,console-tools,coreutils,debianutils,e2fsprogs,editors,findutils,init,klibc-utils,libbb,libpwdgrp,loginutils,mailutils,miscutils,modutils,networking,printutils,procps,runit,scripts,selinux,shell,sysklogd,util-linux \
   --pcOutput outputJedelhauser.pc
 
