@@ -10,4 +10,4 @@ echo -e "Run TypeChef on busybox"
 
 # Choose Java 17 (type 0)
 sudo update-alternatives --config java
-./jedelhauserGIT.sh
+./KJT_runTypeChef.sh

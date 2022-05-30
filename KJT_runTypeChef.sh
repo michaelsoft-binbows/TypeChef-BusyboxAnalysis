@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./cleanBusyboxGit.sh
+./KJT_cleanCustomBusybox.sh
 
-./analyzeBusyboxGit.sh | tee jedelhauserGit.log
+./KJT_analyzeCustomBusybox.sh | tee KJT_outputResult.log
  
