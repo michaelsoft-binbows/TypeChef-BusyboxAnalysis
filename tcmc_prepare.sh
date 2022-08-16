@@ -3,6 +3,9 @@
 #* the feature model
 #* the header file
 
+echo "Choose Java version 8!"
+sudo update-alternatives --config java
+
 codebasePath="$(pwd)/custom_busybox/"
 
 sbt mkrun
